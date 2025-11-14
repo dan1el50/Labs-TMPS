@@ -1,6 +1,6 @@
-package singleton;
+package utilities;
 
-import models.Meal;
+import domain.models.Meal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,5 +54,9 @@ public class RestaurantOrderSystem {
 
     public int getTotalOrders() {
         return totalOrders;
+    }
+
+    public double getTotalRevenue() {
+        return totalRevenue;
     }
 }
