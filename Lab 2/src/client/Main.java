@@ -1,36 +1,42 @@
 // client/Main.java
+
 package client;
 
 import domain.facade.RestaurantFacade;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("╔════════════════════════════════════════╗");
-        System.out.println("║  WELCOME TO RESTAURANT ORDERING SYSTEM ║");
-        System.out.println("╔════════════════════════════════════════╗\n");
-
-        // Create facade - single point of interaction
+        // FACADE PATTERN - Single point of interaction
         RestaurantFacade restaurant = new RestaurantFacade();
 
-        // Simple orders
-        restaurant.orderPizza();
-        restaurant.orderBurger();
+        System.out.println("═══════════════════════════════════════");
+        System.out.println("    DECORATOR PATTERN DEMONSTRATION");
+        System.out.println("═══════════════════════════════════════\n");
 
-        // Custom builder order
-        restaurant.orderCustomBurger("Sesame Bun", "Beef Patty", "Lettuce, Tomato, Onion");
-
-        // Decorated orders
+        // DECORATOR PATTERN - Adding extras dynamically
         restaurant.orderBurgerWithExtras();
+
+        // DECORATOR PATTERN - Applying discount
         restaurant.orderPizzaWithDiscount(20.0);
 
-        // Composite orders (Combos)
+        System.out.println("\n═══════════════════════════════════════");
+        System.out.println("    COMPOSITE PATTERN DEMONSTRATION");
+        System.out.println("═══════════════════════════════════════\n");
+
+        // COMPOSITE PATTERN - Family combo (multiple meals)
         restaurant.orderFamilyCombo();
+
+        // COMPOSITE PATTERN - Kids combo (smaller combo)
         restaurant.orderKidsCombo();
 
-        // Display results
+        System.out.println("\n═══════════════════════════════════════");
+        System.out.println("         ORDER SUMMARY (FACADE)");
+        System.out.println("═══════════════════════════════════════\n");
+
+        // FACADE PATTERN - Simplified access to order history and statistics
         restaurant.displayOrderHistory();
         restaurant.displayStatistics();
 
-        System.out.println("\n🎉 Thank you for using our system!");
+        System.out.println("\n🎉 Structural Patterns Demo Complete!");
     }
 }

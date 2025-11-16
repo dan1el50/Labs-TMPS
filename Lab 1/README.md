@@ -1,7 +1,7 @@
 # Creational Design Patterns
 
 
-## Author: Daria Ratteeva
+## Author: Daniel Cojocaru
 
 ----
 
